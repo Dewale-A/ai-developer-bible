@@ -8,7 +8,7 @@
 
 ## Who This Is For
 
-You understand the basics of LLMs and want to go further. You want to build systems where multiple AI agents collaborate to solve complex problems — loan processing, compliance analysis, data quality assessment. This guide takes you from concept to production.
+You understand the basics of LLMs and want to go further. You want to build systems where multiple AI agents collaborate to solve complex problems; loan processing, compliance analysis, data quality assessment. This guide takes you from concept to production.
 
 ---
 
