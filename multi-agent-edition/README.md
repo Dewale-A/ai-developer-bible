@@ -71,13 +71,16 @@ All projects use **CrewAI** with **OpenAI** models and are production-ready.
 
 ---
 
-## Adding New Projects
+## What's Next
 
-This guide is designed to grow. To add a new project:
+After completing this guide, challenge yourself:
 
-1. Create a new file in `part3-projects/`
-2. Follow the existing walkthrough format
-3. Update this README
+1. **Extend a project** — Add a new agent to Loan Origination (e.g., fraud detection)
+2. **Build something new** — Pick a workflow from your domain and agent-ify it
+3. **Try a different framework** — Implement the same system in LangGraph or AutoGen
+4. **Go hybrid** — Combine RAG + multi-agent (see the RAG Edition in this repo)
+
+The patterns here apply beyond CrewAI. Master the concepts, and the tools become interchangeable.
 
 ---
 
