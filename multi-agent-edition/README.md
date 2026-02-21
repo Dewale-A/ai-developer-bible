@@ -49,6 +49,7 @@ By the end of this guide, you'll be able to:
 - [4.2 Observability & Debugging](./part4-production/02-observability.md) ✅
 - [4.3 Cost Management](./part4-production/03-cost-management.md) ✅
 - [4.4 Testing Agent Systems](./part4-production/04-testing.md) ✅
+- [4.5 API Deployment](./part4-production/05-api-deployment.md) ✅ **NEW**
 
 ### Part 5: Interview Ready ✅
 - [5.1 Multi-Agent Concepts Q&A](./part5-interview/01-concepts-qa.md) ✅
