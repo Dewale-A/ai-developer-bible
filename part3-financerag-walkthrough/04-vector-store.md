@@ -63,7 +63,7 @@ class VectorStoreManager:
 **What happens here:**
 1. Load settings (API key, model name)
 2. Create embeddings object (will call OpenAI when needed)
-3. `_vector_store = None` — lazy initialization (created when first used)
+3. `_vector_store = None` : lazy initialization (created when first used)
 
 ---
 
@@ -398,4 +398,4 @@ A: Current code will throw an exception. Production improvements:
 
 ## Next Up
 
-Section 5: `rag_chain.py` — the heart of the system, connecting retrieval to generation.
+Section 5: `rag_chain.py` : the heart of the system, connecting retrieval to generation.

@@ -364,13 +364,13 @@ python main.py --focus "data governance" --report-type executive
 
 ## Key Learnings
 
-1. **Document tools are simple** — Just file I/O, but critical for agent access
-2. **Analysis agent does the heavy lifting** — Mapping, gaps, risk assessment
-3. **Delegation enabled** — Analysis agent can ask for more document searches
-4. **Output file** — Report saved directly to markdown file
+1. **Document tools are simple** : Just file I/O, but critical for agent access
+2. **Analysis agent does the heavy lifting** : Mapping, gaps, risk assessment
+3. **Delegation enabled** : Analysis agent can ask for more document searches
+4. **Output file** : Report saved directly to markdown file
 
 ---
 
 ## Next Up
 
-Section 3: Agentic Data Quality — automated data assessment with CDE focus.
+Section 3: Agentic Data Quality : automated data assessment with CDE focus.

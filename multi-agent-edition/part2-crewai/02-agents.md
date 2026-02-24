@@ -1,11 +1,11 @@
-# Part 2, Section 2: Agents — Roles, Goals, Backstories
+# Part 2, Section 2: Agents : Roles, Goals, Backstories
 
 ## The Three Pillars of Agent Identity
 
 Every effective agent needs:
-1. **Role** — What they are
-2. **Goal** — What they're trying to achieve
-3. **Backstory** — Why they're qualified
+1. **Role** : What they are
+2. **Goal** : What they're trying to achieve
+3. **Backstory** : Why they're qualified
 
 ---
 
@@ -250,10 +250,10 @@ You [key behavior that aligns with goal]."""
 
 **Q: How do you decide what goes in an agent's goal vs backstory?**
 
-> Goal is the outcome you want — what success looks like. Backstory is the expertise and style that gets you there. "Analyze creditworthiness" is the goal. "Senior analyst known for thorough assessments" is the backstory that shapes how the goal is achieved.
+> Goal is the outcome you want : what success looks like. Backstory is the expertise and style that gets you there. "Analyze creditworthiness" is the goal. "Senior analyst known for thorough assessments" is the backstory that shapes how the goal is achieved.
 
 ---
 
 ## Next Up
 
-Section 3: Tasks — defining work and managing dependencies.
+Section 3: Tasks : defining work and managing dependencies.

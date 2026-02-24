@@ -1,4 +1,4 @@
-# Part 2, Section 3: Tasks — Dependencies and Context
+# Part 2, Section 3: Tasks : Dependencies and Context
 
 ## What is a Task?
 
@@ -353,4 +353,4 @@ underwriting_task.context = [credit_task, risk_task]
 
 ## Next Up
 
-Section 4: Tools — extending what agents can do.
+Section 4: Tools : extending what agents can do.

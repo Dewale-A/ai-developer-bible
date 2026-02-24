@@ -512,4 +512,4 @@ class RAGError(Exception):
 
 ## Next Up
 
-Section 4: Performance Optimization — making RAG systems fast.
+Section 4: Performance Optimization : making RAG systems fast.

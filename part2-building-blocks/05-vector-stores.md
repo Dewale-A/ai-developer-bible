@@ -68,7 +68,7 @@ db = Chroma(
 ```
 
 **Pros:**
-- ✅ Zero setup — just pip install
+- ✅ Zero setup : just pip install
 - ✅ Persistent storage built-in
 - ✅ Good for development & small-medium scale
 - ✅ Open source, free
@@ -127,7 +127,7 @@ db = PineconeVectorStore.from_documents(
 ```
 
 **Pros:**
-- ✅ Fully managed — no infrastructure
+- ✅ Fully managed : no infrastructure
 - ✅ Scales to billions of vectors
 - ✅ Built-in filtering, namespaces
 - ✅ Real-time updates
@@ -338,11 +338,11 @@ results = db.similarity_search(
 ```
 
 **Filter operators:**
-- `$eq` — equals (default)
-- `$ne` — not equals
-- `$gt`, `$gte` — greater than
-- `$lt`, `$lte` — less than
-- `$in` — in list
+- `$eq` : equals (default)
+- `$ne` : not equals
+- `$gt`, `$gte` : greater than
+- `$lt`, `$lte` : less than
+- `$in` : in list
 
 ### Getting the Retriever
 
@@ -458,7 +458,7 @@ A:
 - **Exact**: 100% recall, O(N) time, doesn't scale
 - **Approximate**: 95-99% recall, O(log N) time, scales to billions
 
-For most RAG applications, approximate is fine — you're retrieving top-K anyway.
+For most RAG applications, approximate is fine : you're retrieving top-K anyway.
 
 **Q: How would you migrate from ChromaDB to Pinecone?**
 
@@ -523,4 +523,4 @@ retriever = db.as_retriever(search_kwargs={"k": 5})
 
 ## Next Up
 
-Section 6: Retrieval Strategies — going beyond basic similarity search.
+Section 6: Retrieval Strategies : going beyond basic similarity search.

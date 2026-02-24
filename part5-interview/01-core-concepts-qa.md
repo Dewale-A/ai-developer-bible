@@ -17,10 +17,10 @@ RAG (Retrieval-Augmented Generation) combines information retrieval with languag
 3. **Generate** an answer grounded in real data
 
 **Why use it:**
-- LLMs have knowledge cutoffs — RAG adds current information
-- LLMs hallucinate — RAG grounds answers in real documents
-- LLMs can't access private data — RAG brings in your documents
-- Fine-tuning is expensive — RAG is cheaper and more flexible
+- LLMs have knowledge cutoffs : RAG adds current information
+- LLMs hallucinate : RAG grounds answers in real documents
+- LLMs can't access private data : RAG brings in your documents
+- Fine-tuning is expensive : RAG is cheaper and more flexible
 
 **When to use:**
 - Question-answering over documents
@@ -48,7 +48,7 @@ Embeddings convert text into dense numerical vectors that capture semantic meani
 "river bank" → [-0.45, 0.78, -0.12, ...] ← Far!
 ```
 
-**Key insight:** The model learned that "bank loan" and "credit facility" appear in similar contexts, so their embeddings are similar — even though the words are different.
+**Key insight:** The model learned that "bank loan" and "credit facility" appear in similar contexts, so their embeddings are similar : even though the words are different.
 
 ---
 
@@ -72,9 +72,9 @@ Embeddings convert text into dense numerical vectors that capture semantic meani
 **Good Answer:**
 
 Chunking splits documents into smaller pieces for:
-1. **Embedding limits** — models have token limits (e.g., 8192)
-2. **Retrieval precision** — find specific relevant sections
-3. **Context efficiency** — don't waste tokens on irrelevant parts
+1. **Embedding limits** : models have token limits (e.g., 8192)
+2. **Retrieval precision** : find specific relevant sections
+3. **Context efficiency** : don't waste tokens on irrelevant parts
 
 **Chunking strategies:**
 - **Fixed size:** Simple but may cut mid-sentence
@@ -340,14 +340,14 @@ If I'm getting relevant documents but poor answers, the problem is in generation
 
 ## Quick Tips for Interviews
 
-1. **Always explain trade-offs** — there's no perfect solution
-2. **Mention scale considerations** — what works at 1K docs vs 1M
-3. **Talk about production concerns** — error handling, monitoring
-4. **Give concrete numbers** — chunk sizes, K values, latencies
-5. **Admit uncertainty** — "I'd need to test, but my hypothesis is..."
+1. **Always explain trade-offs** : there's no perfect solution
+2. **Mention scale considerations** : what works at 1K docs vs 1M
+3. **Talk about production concerns** : error handling, monitoring
+4. **Give concrete numbers** : chunk sizes, K values, latencies
+5. **Admit uncertainty** : "I'd need to test, but my hypothesis is..."
 
 ---
 
 ## Next Up
 
-Section 2: System Design Scenarios — whiteboard-style problems.
+Section 2: System Design Scenarios : whiteboard-style problems.

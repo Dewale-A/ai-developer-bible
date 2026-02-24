@@ -4,7 +4,7 @@
 
 Computers are great with numbers. They're terrible with meaning.
 
-The sentence "The bank approved my loan" and "My mortgage application was accepted" mean almost the same thing to a human. But to a computer doing string matching, they're completely different — no shared words.
+The sentence "The bank approved my loan" and "My mortgage application was accepted" mean almost the same thing to a human. But to a computer doing string matching, they're completely different : no shared words.
 
 **Embeddings solve this problem.**
 
@@ -24,9 +24,9 @@ A vector is just a list of numbers. That's it.
 [0.0023, -0.0142, 0.0087, ..., 0.0012]  # 1536 numbers
 ```
 
-Each number represents something about the text — but not in a way humans can easily interpret. It's a learned representation.
+Each number represents something about the text : but not in a way humans can easily interpret. It's a learned representation.
 
-Think of it like GPS coordinates. The numbers themselves (51.5074, -0.1278) don't mean much to you, but they precisely locate London. Embeddings are "semantic coordinates" — they locate text in meaning-space.
+Think of it like GPS coordinates. The numbers themselves (51.5074, -0.1278) don't mean much to you, but they precisely locate London. Embeddings are "semantic coordinates" : they locate text in meaning-space.
 
 ---
 
@@ -40,9 +40,9 @@ Imagine plotting words in 3D space where:
 - Z-axis = how "formal" vs "casual" the language is
 
 In this space:
-- "The loan was approved" might be at (0.9, 0.7, 0.8) — financial, positive, formal
-- "The mortgage was rejected" might be at (0.9, -0.6, 0.8) — financial, negative, formal
-- "The surgery went well" might be at (-0.8, 0.7, 0.8) — medical, positive, formal
+- "The loan was approved" might be at (0.9, 0.7, 0.8) : financial, positive, formal
+- "The mortgage was rejected" might be at (0.9, -0.6, 0.8) : financial, negative, formal
+- "The surgery went well" might be at (-0.8, 0.7, 0.8) : medical, positive, formal
 
 The first two are close on X and Z (both financial and formal) but far on Y (opposite sentiment).
 
@@ -56,7 +56,7 @@ Once text is converted to vectors, we can measure how similar two pieces of text
 
 ### Cosine Similarity
 
-The most common measure is **cosine similarity** — the cosine of the angle between two vectors.
+The most common measure is **cosine similarity** : the cosine of the angle between two vectors.
 
 ```
 Cosine Similarity = (A · B) / (||A|| × ||B||)
@@ -132,7 +132,7 @@ print(f"Similarity to doc1 (relevant): {sim1:.4f}")  # ~0.85
 print(f"Similarity to doc2 (irrelevant): {sim2:.4f}")  # ~0.70
 ```
 
-The loan-related query is much more similar to the mortgage document than the restaurant document — even though they share no exact words.
+The loan-related query is much more similar to the mortgage document than the restaurant document : even though they share no exact words.
 
 ---
 
@@ -217,7 +217,7 @@ for i, label in enumerate(labels):
 plt.show()
 ```
 
-This helps you see if similar documents cluster together — a sanity check for your embeddings.
+This helps you see if similar documents cluster together : a sanity check for your embeddings.
 
 ---
 
@@ -236,7 +236,7 @@ The embedding is the bridge between human text and mathematical search.
 
 ## What's Next?
 
-Now you understand embeddings — the magical conversion of text to searchable numbers.
+Now you understand embeddings : the magical conversion of text to searchable numbers.
 
 But where do we store millions of these vectors? How do we search them efficiently? Regular databases aren't designed for this.
 
@@ -250,9 +250,9 @@ Enter: **Vector Databases**.
 
 > **Q: "What is an embedding and why do we use them in RAG?"**
 >
-> **A:** "An embedding is a numerical representation of text — typically a vector of hundreds or thousands of floating-point numbers. The key property is that semantically similar text produces similar vectors. We use embeddings in RAG because they enable semantic search: instead of matching keywords, we can find documents that are conceptually related to a user's question, even if they use different words. The user's query is embedded, then we search the vector store for document chunks with similar embeddings."
+> **A:** "An embedding is a numerical representation of text : typically a vector of hundreds or thousands of floating-point numbers. The key property is that semantically similar text produces similar vectors. We use embeddings in RAG because they enable semantic search: instead of matching keywords, we can find documents that are conceptually related to a user's question, even if they use different words. The user's query is embedded, then we search the vector store for document chunks with similar embeddings."
 
 > **Q: "How do you measure similarity between embeddings?"**
 >
-> **A:** "The most common measure is cosine similarity, which calculates the cosine of the angle between two vectors. A value of 1 means identical direction (very similar), 0 means perpendicular (unrelated), and -1 means opposite. We use cosine similarity rather than Euclidean distance because it's normalized — it measures the angle regardless of vector magnitude, which is more robust for comparing text of different lengths."
+> **A:** "The most common measure is cosine similarity, which calculates the cosine of the angle between two vectors. A value of 1 means identical direction (very similar), 0 means perpendicular (unrelated), and -1 means opposite. We use cosine similarity rather than Euclidean distance because it's normalized : it measures the angle regardless of vector magnitude, which is more robust for comparing text of different lengths."
 

@@ -425,15 +425,15 @@ A: Metrics:
 - **MRR (Mean Reciprocal Rank):** Where does first relevant doc appear?
 - **NDCG:** Measures ranking quality
 
-Manual evaluation matters too — do results make sense?
+Manual evaluation matters too : do results make sense?
 
 **Q: What if retrieval is good but answers are bad?**
 
 A: The problem is likely:
-1. **Prompt engineering** — adjust instructions
-2. **Context length** — too much/too little context
-3. **LLM choice** — model may not be suitable
-4. **Chunking** — chunks may not be coherent
+1. **Prompt engineering** : adjust instructions
+2. **Context length** : too much/too little context
+3. **LLM choice** : model may not be suitable
+4. **Chunking** : chunks may not be coherent
 
 ---
 
@@ -471,11 +471,11 @@ retriever = ContextualCompressionRetriever(
 
 You now understand all the building blocks:
 
-1. **LangChain Architecture** — how pieces fit together
-2. **Document Loading** — getting documents in
-3. **Chunking Strategies** — splitting intelligently
-4. **Embedding Models** — text to vectors
-5. **Vector Stores** — storing and searching
-6. **Retrieval Strategies** — finding the best results
+1. **LangChain Architecture** : how pieces fit together
+2. **Document Loading** : getting documents in
+3. **Chunking Strategies** : splitting intelligently
+4. **Embedding Models** : text to vectors
+5. **Vector Stores** : storing and searching
+6. **Retrieval Strategies** : finding the best results
 
-**Next:** Part 4 — Production Patterns (Docker, observability, scaling).
+**Next:** Part 4 : Production Patterns (Docker, observability, scaling).

@@ -225,8 +225,8 @@ Output: 6 chunks
 ```
 
 **Metadata added:**
-- `chunk_index` — which chunk is this (0, 1, 2...)
-- `chunk_size` — actual size (might be less than max)
+- `chunk_index` : which chunk is this (0, 1, 2...)
+- `chunk_size` : actual size (might be less than max)
 
 ---
 
@@ -311,11 +311,11 @@ A: Context preservation. If a sentence spans two chunks, both chunks get it. Pre
 **Q: What metadata would you add for a production system?**
 
 A: Beyond what we have:
-- `created_at` — when document was added
-- `document_id` — unique identifier
-- `page_number` — for PDFs
-- `section_title` — if parseable
-- `author`, `version` — if available
+- `created_at` : when document was added
+- `document_id` : unique identifier
+- `page_number` : for PDFs
+- `section_title` : if parseable
+- `author`, `version` : if available
 
 **Q: How would you handle a 500MB PDF?**
 
@@ -330,4 +330,4 @@ for page in loader.lazy_load():
 
 ## Next Up
 
-Section 4: `vector_store.py` — storing and searching embeddings with ChromaDB.
+Section 4: `vector_store.py` : storing and searching embeddings with ChromaDB.

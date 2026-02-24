@@ -4,10 +4,10 @@
 
 CrewAI is a framework for building multi-agent AI systems. It provides:
 
-- **Agents** — AI entities with roles and capabilities
-- **Tasks** — Work items for agents to complete
-- **Tools** — Functions agents can call
-- **Crews** — Teams of agents working together
+- **Agents** : AI entities with roles and capabilities
+- **Tasks** : Work items for agents to complete
+- **Tools** : Functions agents can call
+- **Crews** : Teams of agents working together
 
 ---
 
@@ -322,4 +322,4 @@ print(result)
 
 ## Next Up
 
-Section 2: Agents — designing effective agent roles, goals, and backstories.
+Section 2: Agents : designing effective agent roles, goals, and backstories.

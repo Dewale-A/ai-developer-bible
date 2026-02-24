@@ -49,7 +49,7 @@ class Settings(BaseSettings):
 | `llm_model` | `gpt-4o-mini` | Model for answers |
 | `llm_temperature` | `0.1` | Low = more factual |
 
-**Key Point:** `Field(...)` means "required" — app won't start without it.
+**Key Point:** `Field(...)` means "required" : app won't start without it.
 
 ---
 
@@ -160,13 +160,13 @@ print(settings.llm_model)
 **Q: Why use Pydantic Settings instead of plain environment variables?**
 
 A: Three reasons:
-1. **Type validation** — catches mistakes early (e.g., port must be int)
-2. **Default values** — don't need to set everything
-3. **Documentation** — code shows all available settings
+1. **Type validation** : catches mistakes early (e.g., port must be int)
+2. **Default values** : don't need to set everything
+3. **Documentation** : code shows all available settings
 
 **Q: What happens if OPENAI_API_KEY is missing?**
 
-A: Pydantic raises `ValidationError` at startup — app won't run. This is good! Fail fast, not silently.
+A: Pydantic raises `ValidationError` at startup : app won't run. This is good! Fail fast, not silently.
 
 **Q: Why cache settings with `@lru_cache`?**
 
@@ -176,4 +176,4 @@ A: Environment variable reads are I/O operations. Caching makes subsequent calls
 
 ## Next Up
 
-Section 3: `document_processor.py` — loading and chunking documents.
+Section 3: `document_processor.py` : loading and chunking documents.

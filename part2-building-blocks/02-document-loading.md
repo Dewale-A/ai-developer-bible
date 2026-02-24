@@ -411,5 +411,5 @@ How do you split documents into pieces? Too small and you lose context. Too larg
 
 > **Q: "What challenges have you encountered loading documents for RAG?"**
 >
-> **A:** "The main challenges are: (1) Scanned PDFs that require OCR instead of text extraction; (2) Tables that become garbled when extracted as plain text; (3) Repeated headers and footers that add noise to every page; (4) Encoding issues with older documents. I address these by using the right loader for each document type — Unstructured for complex layouts with tables and OCR needs, and post-processing steps to remove noise like repeated headers. Metadata preservation is also important — tracking source file and page number for attribution."
+> **A:** "The main challenges are: (1) Scanned PDFs that require OCR instead of text extraction; (2) Tables that become garbled when extracted as plain text; (3) Repeated headers and footers that add noise to every page; (4) Encoding issues with older documents. I address these by using the right loader for each document type : Unstructured for complex layouts with tables and OCR needs, and post-processing steps to remove noise like repeated headers. Metadata preservation is also important : tracking source file and page number for attribution."
 

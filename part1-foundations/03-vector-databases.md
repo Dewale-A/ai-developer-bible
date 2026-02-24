@@ -8,7 +8,7 @@ Now what?
 
 The naive approach: compare the query vector to all 100,000 document vectors, calculate cosine similarity for each, return the top 5.
 
-This works. But it's O(n) — linear time. With millions of documents, every query takes seconds. That's not acceptable for production.
+This works. But it's O(n) : linear time. With millions of documents, every query takes seconds. That's not acceptable for production.
 
 **Vector databases solve this with clever indexing and approximate search algorithms.**
 
@@ -71,7 +71,7 @@ Think of it like: fly across the country (high layer), drive to the neighborhood
 
 ### 3. Flat (Brute Force)
 
-No indexing — compare query to every vector. 
+No indexing : compare query to every vector. 
 
 **When to use:** Small datasets (<10,000 vectors) where exact results matter more than speed.
 
@@ -208,17 +208,17 @@ For RAG, this is fine. If you're retrieving 5 documents and 1 of them is slightl
 
 ## Scaling Considerations
 
-### Small (< 100K vectors) — ChromaDB, FAISS
+### Small (< 100K vectors) : ChromaDB, FAISS
 - Single machine is fine
 - Embedded or local database
 - Millisecond queries
 
-### Medium (100K - 10M vectors) — Pinecone, Weaviate, Milvus
+### Medium (100K - 10M vectors) : Pinecone, Weaviate, Milvus
 - Consider managed services
 - May need dedicated infrastructure
 - Still sub-second queries
 
-### Large (> 10M vectors) — Pinecone, Milvus, custom solutions
+### Large (> 10M vectors) : Pinecone, Milvus, custom solutions
 - Distributed systems
 - Significant infrastructure investment
 - Query latency becomes a design consideration
@@ -299,7 +299,7 @@ The vector store is the "memory" of our RAG system.
 
 You understand embeddings (converting text to vectors) and vector stores (storing and searching vectors).
 
-Now let's put it all together: the complete **Retrieval-Generation Pipeline** — from user question to final answer.
+Now let's put it all together: the complete **Retrieval-Generation Pipeline** : from user question to final answer.
 
 → [1.4 The Retrieval-Generation Pipeline](./04-retrieval-generation-pipeline.md)
 
@@ -309,9 +309,9 @@ Now let's put it all together: the complete **Retrieval-Generation Pipeline** �
 
 > **Q: "Why use a vector database instead of a regular database?"**
 >
-> **A:** "Traditional databases are optimized for exact matches — find rows where column X equals Y. Vector databases are optimized for similarity search — find vectors closest to a query vector in high-dimensional space. They use specialized indexing algorithms like HNSW or IVF that allow sub-linear search time, making it practical to search millions of vectors in milliseconds. For RAG, this means we can quickly find document chunks semantically similar to a user's question, even when they don't share exact keywords."
+> **A:** "Traditional databases are optimized for exact matches : find rows where column X equals Y. Vector databases are optimized for similarity search : find vectors closest to a query vector in high-dimensional space. They use specialized indexing algorithms like HNSW or IVF that allow sub-linear search time, making it practical to search millions of vectors in milliseconds. For RAG, this means we can quickly find document chunks semantically similar to a user's question, even when they don't share exact keywords."
 
 > **Q: "What trade-offs do approximate nearest neighbor algorithms make?"**
 >
-> **A:** "ANN algorithms trade a small amount of accuracy for significant speed improvements. Instead of guaranteeing the exact top-K results, they find results that are very likely to be in the top-K. In practice, algorithms like HNSW achieve 95-99% recall while being orders of magnitude faster than brute force. For RAG applications, this is an acceptable trade-off — we're usually retrieving 3-5 documents, and if one is slightly suboptimal, the LLM can still generate a good answer."
+> **A:** "ANN algorithms trade a small amount of accuracy for significant speed improvements. Instead of guaranteeing the exact top-K results, they find results that are very likely to be in the top-K. In practice, algorithms like HNSW achieve 95-99% recall while being orders of magnitude faster than brute force. For RAG applications, this is an acceptable trade-off : we're usually retrieving 3-5 documents, and if one is slightly suboptimal, the LLM can still generate a good answer."
 

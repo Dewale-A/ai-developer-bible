@@ -236,12 +236,12 @@ class DataQualityCrew:
 Strong answer:
 > "I start with single agent and only go multi-agent when I hit specific pain points: context overflow, need for distinct expertise, debugging difficulty, or different parts needing different models. 
 >
-> For my loan origination project, I chose multi-agent because the process has clear roles — intake, verification, credit, risk, underwriting, offer. Each role has different tools and expertise. A single agent trying to do all of this would lose track of earlier analysis and make inconsistent decisions.
+> For my loan origination project, I chose multi-agent because the process has clear roles : intake, verification, credit, risk, underwriting, offer. Each role has different tools and expertise. A single agent trying to do all of this would lose track of earlier analysis and make inconsistent decisions.
 >
-> But for simple tasks like summarization, I'd never use multi-agent — it's over-engineering."
+> But for simple tasks like summarization, I'd never use multi-agent : it's over-engineering."
 
 ---
 
 ## Next Up
 
-Part 2: CrewAI Framework Deep Dive — the tools to build multi-agent systems.
+Part 2: CrewAI Framework Deep Dive : the tools to build multi-agent systems.

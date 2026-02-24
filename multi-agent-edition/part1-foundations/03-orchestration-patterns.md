@@ -259,7 +259,7 @@ Used in: Data Quality with Polish flag
 
 **Q: What's the difference between sequential and hierarchical orchestration?**
 
-> In sequential, tasks run one after another in a fixed order — each agent knows exactly when it runs. In hierarchical, a manager agent dynamically decides which workers to use and how to combine their results. Sequential is simpler and predictable; hierarchical is more flexible but complex.
+> In sequential, tasks run one after another in a fixed order : each agent knows exactly when it runs. In hierarchical, a manager agent dynamically decides which workers to use and how to combine their results. Sequential is simpler and predictable; hierarchical is more flexible but complex.
 
 **Q: How do you decide which pattern to use?**
 
@@ -273,4 +273,4 @@ Used in: Data Quality with Polish flag
 
 ## Next Up
 
-Section 4: When to Use Multi-Agent — making the right architectural decisions.
+Section 4: When to Use Multi-Agent : making the right architectural decisions.

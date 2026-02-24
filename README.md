@@ -1,8 +1,12 @@
 # 📖 The AI Developer Bible: RAG Edition
 
+**Published by VeriStack** | [veristack.ca](https://veristack.ca)
+
 **A hands-on guide from zero to production-ready RAG systems.**
 
-*By Wale Aderonmu — built while learning, refined through building.*
+*By Wale Aderonmu - built while learning, refined through building.*
+
+*VeriStack specializes in enterprise AI solutions, helping organizations build and deploy production-ready AI systems. From RAG implementations to multi-agent architectures, we turn AI concepts into business results.*
 
 ---
 
@@ -67,16 +71,16 @@ By the end of this guide, you'll be able to:
 
 ## How to Use This Guide
 
-1. **Read sequentially** — Each section builds on the previous
-2. **Run the code** — Don't just read, execute and experiment
-3. **Break things** — Understanding comes from debugging
-4. **Explain it back** — If you can teach it, you know it
+1. **Read sequentially** : Each section builds on the previous
+2. **Run the code** : Don't just read, execute and experiment
+3. **Break things** : Understanding comes from debugging
+4. **Explain it back** : If you can teach it, you know it
 
 ---
 
 ## The FinanceRAG Project
 
-This guide is built around a real project: **FinanceRAG** — a production-grade RAG system for financial document Q&A.
+This guide is built around a real project: **FinanceRAG** : a production-grade RAG system for financial document Q&A.
 
 📁 Project location: `~/workspace/FinanceRAG/`
 
@@ -85,5 +89,19 @@ As we work through each concept, we'll tie it back to actual code you've built.
 ---
 
 *"The best way to learn is to build. The best way to understand is to teach."*
+
+---
+
+## License
+
+This work is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). You are free to share and adapt this content with proper attribution.
+
+## Want Hands-On Help?
+
+Ready to implement these concepts in your organization? **VeriStack** provides enterprise AI consulting and development services. We help companies build production-ready RAG systems, multi-agent architectures, and custom AI solutions.
+
+**Get in touch:** [veristack.ca](https://veristack.ca)
+
+---
 
 Let's begin. → [Part 1.1: What is RAG and Why It Matters](./part1-foundations/01-what-is-rag.md)

@@ -3,10 +3,10 @@
 ## What is an Agent?
 
 An agent is an LLM enhanced with:
-1. **Identity** — Role, goals, personality
-2. **Memory** — Context from previous steps
-3. **Tools** — Functions it can call
-4. **Autonomy** — Ability to decide what to do
+1. **Identity** : Role, goals, personality
+2. **Memory** : Context from previous steps
+3. **Tools** : Functions it can call
+4. **Autonomy** : Ability to decide what to do
 
 ```
 Basic LLM:
@@ -180,10 +180,10 @@ class CreditCheckTool(BaseTool):
 
 **Key principles:**
 
-1. **Clear name** — Agent knows when to use it
-2. **Detailed description** — Agent knows how to use it
-3. **Typed arguments** — Agent knows what to pass
-4. **Structured output** — Agent can parse results
+1. **Clear name** : Agent knows when to use it
+2. **Detailed description** : Agent knows how to use it
+3. **Typed arguments** : Agent knows what to pass
+4. **Structured output** : Agent can parse results
 
 ### Bad Tool Design
 
@@ -271,7 +271,7 @@ agent = Agent(
 
 **Q: What's the difference between an LLM and an agent?**
 
-> An LLM is the raw model — it takes text in and produces text out. An agent wraps the LLM with identity (role, goal), capabilities (tools), and memory (context). The agent can reason about what to do, call external functions, and maintain state across interactions.
+> An LLM is the raw model : it takes text in and produces text out. An agent wraps the LLM with identity (role, goal), capabilities (tools), and memory (context). The agent can reason about what to do, call external functions, and maintain state across interactions.
 
 **Q: What is the ReAct pattern?**
 
@@ -279,10 +279,10 @@ agent = Agent(
 
 **Q: How do you make agents more reliable?**
 
-> Several techniques: Lower temperature for consistency, clear tool descriptions so the agent knows when to use them, explicit instructions in the goal/backstory, and structured output formats. Also, giving agents narrow scope — one job per agent — reduces errors.
+> Several techniques: Lower temperature for consistency, clear tool descriptions so the agent knows when to use them, explicit instructions in the goal/backstory, and structured output formats. Also, giving agents narrow scope : one job per agent : reduces errors.
 
 ---
 
 ## Next Up
 
-Section 3: Orchestration Patterns — how multiple agents work together.
+Section 3: Orchestration Patterns : how multiple agents work together.

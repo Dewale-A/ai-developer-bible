@@ -55,9 +55,9 @@ Claim Submission
 
 ### Key Design Decisions
 
-1. **Sequential process** — Each step depends on previous
-2. **Fraud detection early** — Before spending time on assessment
-3. **Separate communication** — Customer-facing vs internal needs differ
+1. **Sequential process** : Each step depends on previous
+2. **Fraud detection early** : Before spending time on assessment
+3. **Separate communication** : Customer-facing vs internal needs differ
 4. **Tools**: Policy lookup, fraud pattern database, payout calculator
 
 ---
@@ -99,8 +99,8 @@ Claim Submission
 
 ### Key Decisions
 
-1. **Scheduled execution** — Run monitoring daily/weekly
-2. **Hierarchical for analysis** — Different regs need different expertise
+1. **Scheduled execution** : Run monitoring daily/weekly
+2. **Hierarchical for analysis** : Different regs need different expertise
 3. **Tools**: Web scraping, internal policy search, compliance database
 4. **Output**: Actionable report with deadlines
 
@@ -144,10 +144,10 @@ Claim Submission
 
 ### Key Decisions
 
-1. **Parallel specialists** — Technical, billing, product can work simultaneously
-2. **QA at the end** — Catch errors before customer sees response
-3. **Customer context** — Pass account history to all agents
-4. **Escalation path** — If confidence low, flag for human review
+1. **Parallel specialists** : Technical, billing, product can work simultaneously
+2. **QA at the end** : Catch errors before customer sees response
+3. **Customer context** : Pass account history to all agents
+4. **Escalation path** : If confidence low, flag for human review
 
 ---
 
@@ -192,9 +192,9 @@ Claim Submission
 
 ### Key Decisions
 
-1. **Parallel analysis** — Financial, legal, operations are independent
-2. **Risk consolidation** — Separate agent to synthesize risks
-3. **Valuation last** — Needs all inputs
+1. **Parallel analysis** : Financial, legal, operations are independent
+2. **Risk consolidation** : Separate agent to synthesize risks
+3. **Valuation last** : Needs all inputs
 4. **Tools**: Financial data APIs, legal database search, industry benchmarks
 
 ---
@@ -232,7 +232,7 @@ For any multi-agent system design:
 ## Common Follow-ups
 
 **"How would you handle errors?"**
-> Tools return error strings. Crew wrapped in try-catch. Graceful degradation — return partial results. Human escalation for low-confidence decisions.
+> Tools return error strings. Crew wrapped in try-catch. Graceful degradation : return partial results. Human escalation for low-confidence decisions.
 
 **"How would you scale this?"**
 > Run crews in parallel for independent cases. Cache repeated lookups. Use cheaper models for simple agents. Batch similar cases.
@@ -247,4 +247,4 @@ For any multi-agent system design:
 
 ## Next Up
 
-Section 3: Code Explanation Practice — walking through your implementations.
+Section 3: Code Explanation Practice : walking through your implementations.

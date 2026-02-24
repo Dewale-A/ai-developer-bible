@@ -99,7 +99,7 @@ Provide a comprehensive answer based on the context above. If the context doesn'
 | `{question}` | User's question |
 | Instructions | How to structure the answer |
 
-**Key guideline:** "If the context doesn't contain enough information, say so" — prevents hallucination!
+**Key guideline:** "If the context doesn't contain enough information, say so" : prevents hallucination!
 
 ---
 
@@ -237,7 +237,7 @@ Input: {"context": "...", "question": "..."}
          "Based on the context..."
 ```
 
-The `|` operator is LangChain's "pipe" — output of one becomes input of next.
+The `|` operator is LangChain's "pipe" : output of one becomes input of next.
 
 ---
 
@@ -463,4 +463,4 @@ A:
 
 ## Next Up
 
-Section 6: `api/main.py` — exposing RAG as REST endpoints with FastAPI.
+Section 6: `api/main.py` : exposing RAG as REST endpoints with FastAPI.

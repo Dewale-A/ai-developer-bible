@@ -435,4 +435,4 @@ duration_ms = (time.time() - start) * 1000
 
 ## Next Up
 
-Section 3: Error Handling & Edge Cases — building resilient RAG systems.
+Section 3: Error Handling & Edge Cases : building resilient RAG systems.

@@ -438,4 +438,4 @@ docker system prune -a
 
 ## Next Up
 
-Section 2: Observability & Logging — seeing what's happening inside your RAG system.
+Section 2: Observability & Logging : seeing what's happening inside your RAG system.

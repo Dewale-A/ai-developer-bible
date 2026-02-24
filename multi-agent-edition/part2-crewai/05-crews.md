@@ -1,4 +1,4 @@
-# Part 2, Section 5: Crews — Orchestrating Collaboration
+# Part 2, Section 5: Crews : Orchestrating Collaboration
 
 ## What is a Crew?
 
@@ -353,4 +353,4 @@ You now understand CrewAI:
 - Tool design (names, descriptions, implementation)
 - Crew orchestration (processes, execution)
 
-**Next:** Part 3 — Project Walkthroughs with real code.
+**Next:** Part 3 : Project Walkthroughs with real code.

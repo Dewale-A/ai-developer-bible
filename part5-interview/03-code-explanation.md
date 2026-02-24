@@ -8,10 +8,10 @@
 
 When asked about your code:
 
-1. **Start high-level** — what does it do, why does it exist
-2. **Explain the flow** — data in, data out
-3. **Highlight key decisions** — why this approach
-4. **Mention trade-offs** — what you'd do differently
+1. **Start high-level** : what does it do, why does it exist
+2. **Explain the flow** : data in, data out
+3. **Highlight key decisions** : why this approach
+4. **Mention trade-offs** : what you'd do differently
 
 ---
 
@@ -42,9 +42,9 @@ class DocumentProcessor:
 
 > "The DocumentProcessor handles ingestion. It loads files and splits them into chunks for embedding.
 > 
-> I'm using RecursiveCharacterTextSplitter because it tries to keep semantic units together — it first tries to split on paragraphs, then sentences, then words. This gives better retrieval than just cutting every N characters.
+> I'm using RecursiveCharacterTextSplitter because it tries to keep semantic units together : it first tries to split on paragraphs, then sentences, then words. This gives better retrieval than just cutting every N characters.
 > 
-> The chunk_size and overlap come from settings, so they're configurable without code changes. I typically use 1000 characters with 200 overlap — that's a good balance for financial docs."
+> The chunk_size and overlap come from settings, so they're configurable without code changes. I typically use 1000 characters with 200 overlap : that's a good balance for financial docs."
 
 **Follow-up questions to expect:**
 
@@ -89,13 +89,13 @@ class VectorStoreManager:
 > 
 > First, lazy initialization with the @property decorator. The vector store isn't created until it's first accessed. This makes startup faster and lets us fail gracefully if there's a config issue.
 > 
-> Second, it's a singleton — there's a module-level `get_vector_store_manager()` function that ensures we only have one instance. Opening multiple database connections would waste resources and could cause consistency issues."
+> Second, it's a singleton : there's a module-level `get_vector_store_manager()` function that ensures we only have one instance. Opening multiple database connections would waste resources and could cause consistency issues."
 
 **Follow-up questions:**
 
 Q: *"Why ChromaDB instead of Pinecone?"*
 
-> "For this project, ChromaDB made sense because it's zero-setup — just pip install and go. It persists to disk, so data survives restarts. For a production system with millions of documents, I'd switch to Pinecone or Qdrant for better scaling. But ChromaDB is perfect for development and small-to-medium scale."
+> "For this project, ChromaDB made sense because it's zero-setup : just pip install and go. It persists to disk, so data survives restarts. For a production system with millions of documents, I'd switch to Pinecone or Qdrant for better scaling. But ChromaDB is perfect for development and small-to-medium scale."
 
 Q: *"What happens if OpenAI is down?"*
 
@@ -138,11 +138,11 @@ class RAGChain:
 
 > "This is the core RAG logic. The query method does three things:
 > 
-> First, retrieval — it searches the vector store for the K most relevant chunks. I use similarity_search_with_scores to get both the documents and their relevance scores, which is useful for debugging and confidence thresholds.
+> First, retrieval : it searches the vector store for the K most relevant chunks. I use similarity_search_with_scores to get both the documents and their relevance scores, which is useful for debugging and confidence thresholds.
 > 
-> Second, context building — the _format_docs method formats the chunks into a string with clear boundaries. Each chunk is labeled '[Document 1: filename.md]' so the LLM can cite sources.
+> Second, context building : the _format_docs method formats the chunks into a string with clear boundaries. Each chunk is labeled '[Document 1: filename.md]' so the LLM can cite sources.
 > 
-> Third, generation — I use LangChain's pipe syntax to chain the prompt template, LLM, and output parser. It's clean and easy to modify."
+> Third, generation : I use LangChain's pipe syntax to chain the prompt template, LLM, and output parser. It's clean and easy to modify."
 
 **Key point about the prompt:**
 
@@ -152,11 +152,11 @@ class RAGChain:
 
 Q: *"Why K=5?"*
 
-> "Five is a reasonable default. More chunks means more context for the LLM, but also more tokens and cost. I'd tune this based on query types — simple factual questions might need only 2-3, while complex analysis might need 7-10."
+> "Five is a reasonable default. More chunks means more context for the LLM, but also more tokens and cost. I'd tune this based on query types : simple factual questions might need only 2-3, while complex analysis might need 7-10."
 
 Q: *"How do you handle when the question isn't in the documents?"*
 
-> "The prompt instructs the LLM to say it doesn't have enough information. Additionally, I return the relevance scores — if they're all low (say, below 0.5), that's a signal the documents aren't relevant. You could add a confidence threshold that returns a fallback message."
+> "The prompt instructs the LLM to say it doesn't have enough information. Additionally, I return the relevance scores : if they're all low (say, below 0.5), that's a signal the documents aren't relevant. You could add a confidence threshold that returns a fallback message."
 
 ---
 
@@ -185,11 +185,11 @@ async def query_documents(request: QueryRequest):
 
 > "The API uses FastAPI, which I chose for three reasons:
 > 
-> First, automatic validation — the QueryRequest model ensures the question is at least 3 characters and K is between 1 and 20. Invalid requests get rejected with helpful error messages.
+> First, automatic validation : the QueryRequest model ensures the question is at least 3 characters and K is between 1 and 20. Invalid requests get rejected with helpful error messages.
 > 
-> Second, auto-generated documentation — /docs gives you Swagger UI for free, which is great for testing and onboarding.
+> Second, auto-generated documentation : /docs gives you Swagger UI for free, which is great for testing and onboarding.
 > 
-> Third, async support — although the current implementation isn't fully async, FastAPI handles concurrent requests well, and I can add async LLM calls later."
+> Third, async support : although the current implementation isn't fully async, FastAPI handles concurrent requests well, and I can add async LLM calls later."
 
 ---
 
@@ -201,25 +201,25 @@ Good answers show self-awareness:
 
 > "A few things I'd improve:
 > 
-> 1. **Add hybrid search** — financial documents have lots of acronyms (CET1, LCR) that pure vector search might miss. Combining with keyword search would help.
+> 1. **Add hybrid search** : financial documents have lots of acronyms (CET1, LCR) that pure vector search might miss. Combining with keyword search would help.
 > 
-> 2. **Add reranking** — for better precision, I'd retrieve more candidates (say 20) and rerank with a cross-encoder to get the best 5.
+> 2. **Add reranking** : for better precision, I'd retrieve more candidates (say 20) and rerank with a cross-encoder to get the best 5.
 > 
-> 3. **Better error handling** — add retry logic, circuit breakers, and graceful degradation.
+> 3. **Better error handling** : add retry logic, circuit breakers, and graceful degradation.
 > 
-> 4. **Caching** — common queries should be cached to reduce latency and cost."
+> 4. **Caching** : common queries should be cached to reduce latency and cost."
 
 ### "How would you test this?"
 
 > "Several levels:
 > 
-> **Unit tests** — test chunking logic, metadata extraction, response formatting
+> **Unit tests** : test chunking logic, metadata extraction, response formatting
 > 
-> **Integration tests** — test the full query pipeline with a test database
+> **Integration tests** : test the full query pipeline with a test database
 > 
-> **Retrieval evaluation** — build a test set of queries with known relevant documents, measure recall@k
+> **Retrieval evaluation** : build a test set of queries with known relevant documents, measure recall@k
 > 
-> **End-to-end evaluation** — test answer quality, possibly with LLM-as-judge comparing to expected answers"
+> **End-to-end evaluation** : test answer quality, possibly with LLM-as-judge comparing to expected answers"
 
 ### "Walk me through a request"
 
@@ -239,11 +239,11 @@ Good answers show self-awareness:
 
 ## Tips for Code Explanation
 
-1. **Know your code** — be able to explain any line
-2. **Explain the WHY** — decisions matter more than syntax
-3. **Acknowledge limitations** — shows maturity
-4. **Use concrete numbers** — "1000 characters", "~2 seconds"
-5. **Connect to business value** — "This ensures accuracy for compliance"
+1. **Know your code** : be able to explain any line
+2. **Explain the WHY** : decisions matter more than syntax
+3. **Acknowledge limitations** : shows maturity
+4. **Use concrete numbers** : "1000 characters", "~2 seconds"
+5. **Connect to business value** : "This ensures accuracy for compliance"
 
 ---
 

@@ -23,7 +23,7 @@ def test_loan_decision():
 
 ### 1. Tool Unit Tests
 
-Test tools independently — they're deterministic:
+Test tools independently : they're deterministic:
 
 ```python
 def test_credit_check_tool():
@@ -299,4 +299,4 @@ You now understand production patterns:
 - Cost management
 - Testing strategies
 
-**Next:** Part 5 — Interview Ready.
+**Next:** Part 5 : Interview Ready.

@@ -362,4 +362,4 @@ def query(question: str):
 
 ## Next Up
 
-Section 3: Code Explanation Practice — walking through your implementation.
+Section 3: Code Explanation Practice : walking through your implementation.

@@ -197,10 +197,10 @@ def process_loan(app_id: str):
 
 **Q: How do you handle errors in multi-agent systems?**
 
-> I design tools to return error strings rather than throw exceptions, so agents can reason about failures. I wrap crew execution in try-catch blocks, validate inputs before starting, and implement graceful degradation — if credit analysis fails, I can still provide partial results and flag for manual review. I also set max iterations to prevent agent loops.
+> I design tools to return error strings rather than throw exceptions, so agents can reason about failures. I wrap crew execution in try-catch blocks, validate inputs before starting, and implement graceful degradation : if credit analysis fails, I can still provide partial results and flag for manual review. I also set max iterations to prevent agent loops.
 
 ---
 
 ## Next Up
 
-Section 2: Observability — seeing inside your agent systems.
+Section 2: Observability : seeing inside your agent systems.

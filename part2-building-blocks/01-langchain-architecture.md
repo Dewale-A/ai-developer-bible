@@ -429,7 +429,7 @@ How do you read PDFs, Word docs, and Markdown files? What metadata should you pr
 
 > **Q: "Why use LangChain instead of calling APIs directly?"**
 >
-> **A:** "LangChain provides standardized abstractions that make it easy to swap components — for example, switching from OpenAI embeddings to an open-source model, or from ChromaDB to Pinecone, often requires changing just one line. It also handles common patterns like chunking, retrieval, and prompt construction out of the box, which significantly reduces development time. The tradeoff is an additional dependency and some abstraction overhead, but for most RAG applications, the productivity gain is worth it."
+> **A:** "LangChain provides standardized abstractions that make it easy to swap components : for example, switching from OpenAI embeddings to an open-source model, or from ChromaDB to Pinecone, often requires changing just one line. It also handles common patterns like chunking, retrieval, and prompt construction out of the box, which significantly reduces development time. The tradeoff is an additional dependency and some abstraction overhead, but for most RAG applications, the productivity gain is worth it."
 
 > **Q: "Explain LangChain Expression Language (LCEL)."**
 >

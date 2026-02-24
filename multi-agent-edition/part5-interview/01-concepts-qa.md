@@ -13,7 +13,7 @@
 > 3. I need different expertise for different parts
 > 4. I want to debug and improve components independently
 >
-> For my loan origination project, I have 6 agents because each mirrors a real specialist — intake, verification, credit analyst, risk assessor, underwriter, and offer generator.
+> For my loan origination project, I have 6 agents because each mirrors a real specialist : intake, verification, credit analyst, risk assessor, underwriter, and offer generator.
 
 ---
 
@@ -33,7 +33,7 @@
 **Strong Answer:**
 > Through context passing. When I define a task, I set `task.context = [previous_task]`. The agent receives the previous task's output in its prompt.
 >
-> I'm selective about context — I don't pass everything to every agent. For example, my underwriter agent gets context from verification, credit, and risk tasks, but not the raw intake. This keeps context manageable and focused.
+> I'm selective about context : I don't pass everything to every agent. For example, my underwriter agent gets context from verification, credit, and risk tasks, but not the raw intake. This keeps context manageable and focused.
 
 ---
 
@@ -44,14 +44,14 @@
 >
 > For example, my credit analyst has: "10 years of consumer lending experience, known for thorough, balanced assessments." This tells the LLM to be experienced and balanced, not aggressive or superficial.
 >
-> Key elements: years of experience, specific domain, working style, quality standards. Keep it focused — a paragraph, not a page.
+> Key elements: years of experience, specific domain, working style, quality standards. Keep it focused : a paragraph, not a page.
 
 ---
 
 ### Q: How do tools extend agent capabilities?
 
 **Strong Answer:**
-> LLMs can think but can't act. Tools bridge that gap — they're functions agents can call.
+> LLMs can think but can't act. Tools bridge that gap : they're functions agents can call.
 >
 > For example, my credit analyst has a `credit_check` tool that calculates credit tiers from a score, and a `dti_calculator` that computes debt-to-income ratios. The agent reasons about what to do, calls the tools, and interprets results.
 >
@@ -74,7 +74,7 @@
 >
 > 4. **Connect with context**: Which tasks depend on which? I set `task.context` to pass information between agents.
 >
-> Then I test iteratively — run with verbose mode, see what works, adjust.
+> Then I test iteratively : run with verbose mode, see what works, adjust.
 
 ---
 
@@ -85,7 +85,7 @@
 >
 > I ask: "Can this task be split into distinct roles with different expertise?" If yes, those become agents. If roles blur together, I keep them as one agent.
 >
-> For loan origination, I have 6 agents because each has genuinely different expertise and tools. For policy analysis, I only need 3 — ingestion, analysis, reporting.
+> For loan origination, I have 6 agents because each has genuinely different expertise and tools. For policy analysis, I only need 3 : ingestion, analysis, reporting.
 >
 > I wouldn't use 6 agents if 3 could do it. I also wouldn't force everything into 1 agent if it makes the task too complex.
 
@@ -96,9 +96,9 @@
 **Strong Answer:**
 > Context is how information flows between agents. But more isn't always better.
 >
-> If I pass all previous outputs to every agent, context grows huge — slower, more expensive, and agents lose focus. Instead, I'm selective.
+> If I pass all previous outputs to every agent, context grows huge : slower, more expensive, and agents lose focus. Instead, I'm selective.
 >
-> My underwriter doesn't need the raw application data — they need the analyzed results from verification, credit, and risk. So I set:
+> My underwriter doesn't need the raw application data : they need the analyzed results from verification, credit, and risk. So I set:
 > ```python
 > underwriting_task.context = [verification_task, credit_task, risk_task]
 > ```
@@ -178,4 +178,4 @@
 
 ## Next Up
 
-Section 2: System Design Scenarios — whiteboard problems for multi-agent.
+Section 2: System Design Scenarios : whiteboard problems for multi-agent.

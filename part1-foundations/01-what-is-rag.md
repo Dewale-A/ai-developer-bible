@@ -2,7 +2,7 @@
 
 ## The Problem RAG Solves
 
-Imagine you're a new employee at a bank. On day one, you're smart, well-educated, and capable of reasoning through problems. But you don't know anything about *this specific bank* — its policies, its products, its internal processes.
+Imagine you're a new employee at a bank. On day one, you're smart, well-educated, and capable of reasoning through problems. But you don't know anything about *this specific bank* : its policies, its products, its internal processes.
 
 Now someone asks you: "What's our policy on loan deferrals for customers affected by natural disasters?"
 
@@ -32,7 +32,7 @@ Let's break this down:
 ### Step 1: Retrieval
 When a user asks a question, we first search a knowledge base to find documents (or chunks of documents) that are relevant to the question.
 
-This isn't keyword search like Google circa 2005. It's **semantic search** — finding documents that are conceptually similar, even if they don't share exact words.
+This isn't keyword search like Google circa 2005. It's **semantic search** : finding documents that are conceptually similar, even if they don't share exact words.
 
 Example:
 - Query: "What happens if a customer can't pay their mortgage?"
@@ -161,7 +161,7 @@ With RAG, you can show *which documents* informed an answer. This matters for co
 Policies change. Regulations update. RAG lets you update your knowledge base without retraining models.
 
 ### 4. Data Privacy
-Sensitive documents stay in your vector store — they're never sent to OpenAI for training. You control your data.
+Sensitive documents stay in your vector store : they're never sent to OpenAI for training. You control your data.
 
 ---
 
@@ -169,7 +169,7 @@ Sensitive documents stay in your vector store — they're never sent to OpenAI f
 
 | Term | Plain English |
 |------|---------------|
-| **RAG** | Retrieval-Augmented Generation — look stuff up, then answer |
+| **RAG** | Retrieval-Augmented Generation : look stuff up, then answer |
 | **Embedding** | Converting text to a list of numbers that capture meaning |
 | **Vector** | That list of numbers (e.g., 1536 floats for OpenAI's model) |
 | **Vector Store** | A database optimized for searching vectors |

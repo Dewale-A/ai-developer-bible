@@ -17,10 +17,10 @@ Single Agent: [tries to do everything]
 
 **Problems with single agents on complex tasks:**
 
-1. **Context overload** — Too much to track at once
-2. **Role confusion** — Jack of all trades, master of none
-3. **No checks and balances** — One perspective, potential blind spots
-4. **Difficult to debug** — Where did it go wrong?
+1. **Context overload** : Too much to track at once
+2. **Role confusion** : Jack of all trades, master of none
+3. **No checks and balances** : One perspective, potential blind spots
+4. **Difficult to debug** : Where did it go wrong?
 
 ---
 
@@ -75,7 +75,7 @@ Think of a hospital:
 **Multi-Agent Approach:**
 > "Receptionist checks you in. Nurse takes vitals. Doctor diagnoses. Specialist operates. Billing handles payment."
 
-Each professional is specialized. They hand off to each other. The system is resilient — if billing has an issue, it doesn't affect your surgery.
+Each professional is specialized. They hand off to each other. The system is resilient : if billing has an issue, it doesn't affect your surgery.
 
 ---
 
@@ -146,10 +146,10 @@ def test_credit_analyst():
 
 Multi-agent adds complexity. Don't use it when:
 
-- **Simple task** — One agent can handle it
-- **No clear roles** — Can't identify distinct responsibilities
-- **Latency critical** — Multiple agents = multiple LLM calls
-- **Budget constrained** — More agents = more API costs
+- **Simple task** : One agent can handle it
+- **No clear roles** : Can't identify distinct responsibilities
+- **Latency critical** : Multiple agents = multiple LLM calls
+- **Budget constrained** : More agents = more API costs
 
 **Rule of thumb:** Start with one agent. Add more when you hit limits.
 
@@ -166,7 +166,7 @@ Multi-agent adds complexity. Don't use it when:
 | **LangGraph** | Graph-based control | Complex state machines |
 | **Agency Swarm** | Customizable | Custom orchestration |
 
-**This guide focuses on CrewAI** — the most intuitive for enterprise use cases.
+**This guide focuses on CrewAI** : the most intuitive for enterprise use cases.
 
 ---
 
@@ -191,10 +191,10 @@ You'll learn these terms throughout this guide:
 **Q: Why would you use multiple agents instead of one?**
 
 Strong answer:
-> "Multi-agent systems mirror how real organizations work — specialists collaborating. For complex tasks like loan origination, I use separate agents for intake, verification, credit analysis, and underwriting. Each agent has focused expertise, the context stays manageable, and I can debug or improve individual components without affecting others. It's also more testable — I can unit test each agent's behavior independently."
+> "Multi-agent systems mirror how real organizations work : specialists collaborating. For complex tasks like loan origination, I use separate agents for intake, verification, credit analysis, and underwriting. Each agent has focused expertise, the context stays manageable, and I can debug or improve individual components without affecting others. It's also more testable : I can unit test each agent's behavior independently."
 
 ---
 
 ## Next Up
 
-Section 2: Agent Architectures — how individual agents are structured.
+Section 2: Agent Architectures : how individual agents are structured.

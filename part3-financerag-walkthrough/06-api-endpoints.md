@@ -519,10 +519,10 @@ python main.py serve
 
 You now understand the entire FinanceRAG codebase:
 
-1. **Settings** — Configuration management
-2. **Document Processor** — Loading and chunking
-3. **Vector Store** — ChromaDB operations
-4. **RAG Chain** — Retrieval + generation
-5. **API** — REST endpoints
+1. **Settings** : Configuration management
+2. **Document Processor** : Loading and chunking
+3. **Vector Store** : ChromaDB operations
+4. **RAG Chain** : Retrieval + generation
+5. **API** : REST endpoints
 
-**Next:** Part 4 will cover production patterns — Docker, monitoring, scaling.
+**Next:** Part 4 will cover production patterns : Docker, monitoring, scaling.

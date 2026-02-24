@@ -5,7 +5,7 @@
 Multi-agent systems are black boxes without observability:
 
 ```
-Input --> [???] --> Output
+Input --> [BLACK BOX] --> Output
 
 "Why did it deny the loan?"
 "I don't know, it just did."
@@ -15,7 +15,7 @@ Input --> [???] --> Output
 
 ## Verbose Mode
 
-The simplest observability — see agent thinking:
+The simplest observability : see agent thinking:
 
 ```python
 crew = Crew(
@@ -247,10 +247,10 @@ def compare_runs(app_id, run1_log, run2_log):
 
 **Q: How do you debug a multi-agent system?**
 
-> First, enable verbose mode to see agent thinking. Then isolate — run one agent at a time to find which one fails. Check context flow to ensure agents receive the right information. Test tools independently to verify they work. Log key events and compare successful vs failed runs to find divergence points.
+> First, enable verbose mode to see agent thinking. Then isolate : run one agent at a time to find which one fails. Check context flow to ensure agents receive the right information. Test tools independently to verify they work. Log key events and compare successful vs failed runs to find divergence points.
 
 ---
 
 ## Next Up
 
-Section 3: Cost Management — controlling your LLM spend.
+Section 3: Cost Management : controlling your LLM spend.

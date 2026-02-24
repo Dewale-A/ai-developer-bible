@@ -16,7 +16,7 @@ Data quality issues cost organizations millions:
 - Customer trust erosion
 - Operational inefficiencies
 
-**Critical Data Elements (CDEs)** are the most important fields — customer IDs, account numbers, transaction amounts. These need extra scrutiny.
+**Critical Data Elements (CDEs)** are the most important fields : customer IDs, account numbers, transaction amounts. These need extra scrutiny.
 
 ---
 
@@ -403,11 +403,11 @@ python main.py --data sample_data/customers.csv --cde sample_data/cde_config.jso
 
 ## Key Learnings
 
-1. **CDE focus differentiates** — Not just profiling, but business-critical field emphasis
-2. **Multiple quality dimensions** — Completeness, validity, uniqueness, anomalies
-3. **Optional agents** — `--polish` flag shows how to add agents conditionally
-4. **Different models per agent** — Editor uses GPT-4o for better quality
-5. **Severity categorization** — CRITICAL/HIGH/MEDIUM/LOW helps prioritization
+1. **CDE focus differentiates** : Not just profiling, but business-critical field emphasis
+2. **Multiple quality dimensions** : Completeness, validity, uniqueness, anomalies
+3. **Optional agents** : `--polish` flag shows how to add agents conditionally
+4. **Different models per agent** : Editor uses GPT-4o for better quality
+5. **Severity categorization** : CRITICAL/HIGH/MEDIUM/LOW helps prioritization
 
 ---
 
@@ -418,4 +418,4 @@ You've seen three production multi-agent projects:
 - **Policy Documents**: 3-agent document analysis pipeline
 - **Data Quality**: 4-5 agent assessment with optional polish
 
-**Next:** Part 4 — Production Patterns for deploying multi-agent systems.
+**Next:** Part 4 : Production Patterns for deploying multi-agent systems.

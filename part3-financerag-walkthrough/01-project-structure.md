@@ -114,4 +114,4 @@ def get_instance():
 
 ## Next Up
 
-Section 2: `settings.py` — where all configuration lives.
+Section 2: `settings.py` : where all configuration lives.

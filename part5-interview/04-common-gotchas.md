@@ -50,7 +50,7 @@ User's query: "how much capital do banks need"
        return [query] + variations
    ```
 
-3. **Hybrid search** — keyword search catches exact terms
+3. **Hybrid search** : keyword search catches exact terms
 
 ---
 
@@ -98,7 +98,7 @@ Retrieved: Chunk 1 (says "is" but not the number!)
    )
    ```
 
-3. **Semantic chunking** — use LLM to find natural break points
+3. **Semantic chunking** : use LLM to find natural break points
 
 ---
 

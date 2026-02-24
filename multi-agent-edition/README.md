@@ -1,8 +1,12 @@
 # The AI Developer Bible: Multi-Agent Systems Edition
 
+**Published by VeriStack** | [veristack.ca](https://veristack.ca)
+
 **A hands-on guide to building autonomous multi-agent AI systems.**
 
-*By Wale Aderonmu — built while learning, refined through building.*
+*By Wale Aderonmu - built while learning, refined through building.*
+
+*VeriStack specializes in enterprise AI solutions, helping organizations build and deploy production-ready AI systems. From RAG implementations to multi-agent architectures, we turn AI concepts into business results.*
 
 ---
 
@@ -41,8 +45,9 @@ By the end of this guide, you'll be able to:
 
 ### Part 3: Project Walkthroughs ✅
 - [3.1 Agentic Loan Origination](./part3-projects/01-loan-origination.md) ✅
-- [3.2 Policy Documents Application](./part3-projects/02-policy-documents.md) ✅
-- [3.3 Agentic Data Quality](./part3-projects/03-data-quality.md) ✅
+- [3.2 Agentic Loan Operations](./part3-projects/02-loan-operations.md) ✅ **NEW**
+- [3.3 Policy Documents Application](./part3-projects/03-policy-documents.md) ✅
+- [3.4 Agentic Data Quality](./part3-projects/04-data-quality.md) ✅
 
 ### Part 4: Production Patterns ✅
 - [4.1 Error Handling in Agent Systems](./part4-production/01-error-handling.md) ✅
@@ -64,11 +69,12 @@ This guide is built around three real projects:
 
 | Project | Use Case | Agents | Key Patterns |
 |---------|----------|--------|--------------|
-| **Agentic Loan Origination** | Financial services | 6 agents | Sequential workflow, tool use |
+| **Agentic Loan Origination** | Loan application to approval | 6 agents | Sequential workflow, tool use |
+| **Agentic Loan Operations** | Post-approval to funding | 6 agents | FastAPI, Docker, async processing |
 | **Policy Documents** | Compliance | 3 agents | Document processing, analysis |
-| **Agentic Data Quality** | Data governance | 5 agents | CDE focus, optional polish |
+| **Agentic Data Quality** | Data governance | 5 agents | CDE focus, quality assessment |
 
-All projects use **CrewAI** with **OpenAI** models and are production-ready.
+All projects use **CrewAI** with **OpenAI** models and are built with production-ready architecture.
 
 ---
 
@@ -76,15 +82,29 @@ All projects use **CrewAI** with **OpenAI** models and are production-ready.
 
 After completing this guide, challenge yourself:
 
-1. **Extend a project** — Add a new agent to Loan Origination (e.g., fraud detection)
-2. **Build something new** — Pick a workflow from your domain and agentify it
-3. **Try a different framework** — Implement the same system in LangGraph or AutoGen
-4. **Go hybrid** — Combine RAG + multi-agent (see the RAG Edition in this repo)
+1. **Extend a project** : Add a new agent to Loan Origination (e.g., fraud detection)
+2. **Build something new** : Pick a workflow from your domain and agentify it
+3. **Try a different framework** : Implement the same system in LangGraph or AutoGen
+4. **Go hybrid** : Combine RAG + multi-agent (see the RAG Edition in this repo)
 
 The patterns here apply beyond CrewAI. Master the concepts, and the tools become interchangeable.
 
 ---
 
-*"The future isn't single agents — it's teams of specialized agents working together."*
+*"The future isn't single agents - it's teams of specialized agents working together."*
+
+---
+
+## License
+
+This work is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). You are free to share and adapt this content with proper attribution.
+
+## Want Hands-On Help?
+
+Ready to implement these concepts in your organization? **VeriStack** provides enterprise AI consulting and development services. We help companies build production-ready RAG systems, multi-agent architectures, and custom AI solutions.
+
+**Get in touch:** [veristack.ca](https://veristack.ca)
+
+---
 
 Let's begin. → [Part 1.1: Why Multi-Agent Systems?](./part1-foundations/01-why-multi-agent.md)

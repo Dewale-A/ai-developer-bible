@@ -1,4 +1,4 @@
-# Part 2, Section 4: Tools — Extending Agent Capabilities
+# Part 2, Section 4: Tools : Extending Agent Capabilities
 
 ## Why Tools?
 
@@ -285,14 +285,14 @@ agent.tools = [credit_check, dti_calculator]
 
 **Q: How does an agent decide which tool to use?**
 
-> The agent reads the tool descriptions in its system prompt. When it needs to take an action, it matches its need to the tool descriptions. Good descriptions are critical — if the description doesn't clearly explain when to use the tool, the agent might use the wrong one or not use it at all.
+> The agent reads the tool descriptions in its system prompt. When it needs to take an action, it matches its need to the tool descriptions. Good descriptions are critical : if the description doesn't clearly explain when to use the tool, the agent might use the wrong one or not use it at all.
 
 **Q: How do you handle tool errors?**
 
-> Tools should return clear error messages that help the agent understand what went wrong. Instead of throwing exceptions, return strings like "Error: Application not found" so the agent can reason about what to do next — maybe try a different approach or report the issue.
+> Tools should return clear error messages that help the agent understand what went wrong. Instead of throwing exceptions, return strings like "Error: Application not found" so the agent can reason about what to do next : maybe try a different approach or report the issue.
 
 ---
 
 ## Next Up
 
-Section 5: Crews — orchestrating agents and tasks.
+Section 5: Crews : orchestrating agents and tasks.

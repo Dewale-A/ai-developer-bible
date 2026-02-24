@@ -15,17 +15,17 @@ When asked about your code in interviews:
 
 ### Opening
 
-> "I built a multi-agent loan origination system that processes loan applications through a complete underwriting workflow. It mirrors how real lending institutions operate — specialized roles working sequentially."
+> "I built a multi-agent loan origination system that processes loan applications through a complete underwriting workflow. It mirrors how real lending institutions operate : specialized roles working sequentially."
 
 ### Architecture Overview
 
 > "The system has 6 agents:
-> 1. Document Intake — loads and validates applications
-> 2. Verification — checks data consistency
-> 3. Credit Analyst — evaluates creditworthiness using tools
-> 4. Risk Assessor — calculates risk scores
-> 5. Underwriter — makes the approve/deny decision
-> 6. Offer Generator — structures the loan terms
+> 1. Document Intake : loads and validates applications
+> 2. Verification : checks data consistency
+> 3. Credit Analyst : evaluates creditworthiness using tools
+> 4. Risk Assessor : calculates risk scores
+> 5. Underwriter : makes the approve/deny decision
+> 6. Offer Generator : structures the loan terms
 >
 > They run sequentially because each step depends on the previous. The output of one becomes context for the next."
 
@@ -46,7 +46,7 @@ def credit_analyst_agent() -> Agent:
     )
 ```
 
-> "The backstory establishes expertise — '10 years experience' shapes how the LLM approaches the task. I give this agent two tools: credit_check for tier evaluation and dti_calculator for debt ratios."
+> "The backstory establishes expertise : '10 years experience' shapes how the LLM approaches the task. I give this agent two tools: credit_check for tier evaluation and dti_calculator for debt ratios."
 
 ### Key Code: Context Flow
 
@@ -58,7 +58,7 @@ underwriting_task.context = [verification_task, credit_task, risk_task]
 offer_task.context = [intake_task, underwriting_task]
 ```
 
-> "Context is selective. The underwriter doesn't need raw application data — they need the analyses. But the offer generator needs both the original amounts and the decision. This keeps context focused and manageable."
+> "Context is selective. The underwriter doesn't need raw application data : they need the analyses. But the offer generator needs both the original amounts and the decision. This keeps context focused and manageable."
 
 ### Key Code: Tool Implementation
 
@@ -86,12 +86,12 @@ class DTICalculatorTool(BaseTool):
         })
 ```
 
-> "Tools are deterministic — same input, same output. The description is detailed so the agent knows exactly when and how to use it. I return structured JSON so the agent can parse results."
+> "Tools are deterministic : same input, same output. The description is detailed so the agent knows exactly when and how to use it. I return structured JSON so the agent can parse results."
 
 ### What You'd Improve
 
 > "A few things I'd add in production:
-> 1. Parallel verification — identity, income, employment could run simultaneously
+> 1. Parallel verification : identity, income, employment could run simultaneously
 > 2. More sophisticated risk scoring with ML models
 > 3. Audit logging for compliance
 > 4. Human-in-the-loop for edge cases
@@ -103,7 +103,7 @@ class DTICalculatorTool(BaseTool):
 
 ### Opening
 
-> "This is a multi-agent data quality assessment system. It profiles datasets, validates against business rules, detects anomalies, and generates reports — with special focus on Critical Data Elements."
+> "This is a multi-agent data quality assessment system. It profiles datasets, validates against business rules, detects anomalies, and generates reports : with special focus on Critical Data Elements."
 
 ### Unique Feature: Optional Agent
 
@@ -141,7 +141,7 @@ def create_senior_editor_agent() -> Agent:
     )
 ```
 
-> "I use GPT-4o-mini for most agents — it's fast and cheap. The editor uses GPT-4o because quality matters most there. This is cost optimization — matching model capability to task complexity."
+> "I use GPT-4o-mini for most agents : it's fast and cheap. The editor uses GPT-4o because quality matters most there. This is cost optimization : matching model capability to task complexity."
 
 ---
 
@@ -149,7 +149,7 @@ def create_senior_editor_agent() -> Agent:
 
 ### Opening
 
-> "This system analyzes policy documents for compliance gaps. Three agents — ingestion, analysis, reporting — work sequentially to read documents, identify issues, and produce actionable reports."
+> "This system analyzes policy documents for compliance gaps. Three agents : ingestion, analysis, reporting : work sequentially to read documents, identify issues, and produce actionable reports."
 
 ### Key Feature: Document Tools
 
@@ -172,7 +172,7 @@ class DocumentReaderTool(BaseTool):
             return f.read()
 ```
 
-> "The tools are simple — just file I/O. But they're critical because they give agents access to the documents. The 'list' option helps agents discover what's available."
+> "The tools are simple : just file I/O. But they're critical because they give agents access to the documents. The 'list' option helps agents discover what's available."
 
 ### Key Feature: Delegation
 
@@ -193,7 +193,7 @@ analysis_agent = Agent(
 > "CrewAI is intuitive for business workflows. The role/goal/backstory pattern maps directly to how I think about specialists. Sequential process matches how these workflows actually run. For more complex orchestration, I might consider LangGraph."
 
 **"How do you test this?"**
-> "Tools get unit tests since they're deterministic. For agents, I test output structure — does it have required fields? Smoke tests verify crews complete. I save known-good outputs for regression testing."
+> "Tools get unit tests since they're deterministic. For agents, I test output structure : does it have required fields? Smoke tests verify crews complete. I save known-good outputs for regression testing."
 
 **"What's the latency?"**
 > "About 30-60 seconds for the full loan workflow. Most time is LLM generation. For faster response, I could reduce agents, use streaming, or pre-compute common patterns."

@@ -338,13 +338,13 @@ python main.py APP001
 
 ## Key Learnings
 
-1. **Sequential process mirrors real workflow** — Each agent does what a human specialist would do
-2. **Context passing is selective** — Underwriter doesn't need raw application, just analyses
-3. **Tools enable real calculations** — DTI and risk scoring are actual formulas
-4. **Clear decisions** — APPROVED/DENIED with documented reasoning
+1. **Sequential process mirrors real workflow** : Each agent does what a human specialist would do
+2. **Context passing is selective** : Underwriter doesn't need raw application, just analyses
+3. **Tools enable real calculations** : DTI and risk scoring are actual formulas
+4. **Clear decisions** : APPROVED/DENIED with documented reasoning
 
 ---
 
 ## Next Up
 
-Section 2: Policy Documents Application — compliance analysis with multi-agent AI.
+Section 2: Policy Documents Application : compliance analysis with multi-agent AI.

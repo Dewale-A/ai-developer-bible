@@ -75,7 +75,7 @@ Result: -1 (opposite) to +1 (identical)
 | `text-embedding-3-large` | 3072 | 8191 | $0.13/1M tokens | Higher accuracy needs |
 | `text-embedding-ada-002` | 1536 | 8191 | $0.10/1M tokens | Legacy (still good) |
 
-**FinanceRAG uses:** `text-embedding-3-small` — best balance of quality and cost.
+**FinanceRAG uses:** `text-embedding-3-small` : best balance of quality and cost.
 
 ### Open-Source Models
 
@@ -381,4 +381,4 @@ print(f"Similarity: {similarity:.2%}")  # ~85%+
 
 ## Next Up
 
-Section 5: Vector Stores Deep Dive — where embeddings live and how to search them.
+Section 5: Vector Stores Deep Dive : where embeddings live and how to search them.

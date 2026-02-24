@@ -456,9 +456,9 @@ duration_ms = (time.time() - start) * 1000
 
 You now understand production patterns:
 
-1. **Docker** — Containerization and deployment
-2. **Observability** — Logging and monitoring
-3. **Error Handling** — Resilient systems
-4. **Performance** — Making it fast
+1. **Docker** : Containerization and deployment
+2. **Observability** : Logging and monitoring
+3. **Error Handling** : Resilient systems
+4. **Performance** : Making it fast
 
-**Next:** Part 5 — Interview Ready (Q&A, system design, common gotchas).
+**Next:** Part 5 : Interview Ready (Q&A, system design, common gotchas).
